@@ -1,0 +1,322 @@
+
+> blockchain@1.0.0 start /home/achadde/sources/javascript/blockchain
+> nodemon main.js
+
+[33m[nodemon] 1.19.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node main.js`[39m
+
+Dans main InitialPeers []
+Entrée dans block:Block avec index 0
+Entrée dans websocket.js:connectToPeers appelé par main avec 0 newPeers
+Sortie  de  websocket.js:connectToPeers
+Entrée dans websocket.js:initHttpServer appelé par main
+Sortie de  websocket.js:initHttpServer
+Entrée dans websocket.js:initP2PServer appelé par main avec p2p_port 6001 socket_a []
+
+***** Dans websocket.js:initP2PServer création du WebSocket.Server en Écoute du port p2p sur 6001 *****
+Sortie  de  websocket.js:initP2PServer
+
+ ######## Fin ############# 
+
+
+@@@@@@ Dans websocket.js:initHttpServer Écoute HTTP sur le port : 3001 @@@@@
+
+----- Entrée dans websocket.js:initConnection nouvelle connexion à undefined pour 0 sockets blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' } ] ------
+
+Dans websocket.js:initConnection ws pour ws.url undefined ajouté à sockets
+
+Entrée dans websocket.js:initMessageHandler appelé par websocket.js:initConnection avec ws.url undefined pour 1 sockets blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' } ] ------
+
+Sortie de websocket.js:initMessageHandler
+Entrée dans websocket.js:initErrorHandler appelé par websocket.js:initConnection
+Sortie de  websocket.js:initErrorHandler
+Dans websocket.js:initConnection écriture de queryChainLengthMsg { type: 0 } dans ws.url undefined
+
+ >>>>> Entrée dans websocket.js:write appelé par websocket.js:initConnection avec ws.url undefined message { type: 0 }
+Sortie  de websocket.js:initConnection
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":0}
+Dans websocket.js:initMessageHandler message.type 0
+Entrée dans websocket.js:responseLatestMsg avec blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' } ]
+Sortie  de outils.js:getLatestElement result Block {
+  index: 0,
+  previousHash: '0',
+  timestamp: 1465154705,
+  data: 'mon bloc genesis !',
+  hash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' }
+Sortie  de websocket.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":0,"previousHash":"0","timestamp":1465154705,"data":"mon bloc genesis !","hash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7"}]' }
+Dans websocket.js:initMessageHandler write dans undefined de responseLatestMsg { type: 2,
+  data:
+   '[{"index":0,"previousHash":"0","timestamp":1465154705,"data":"mon bloc genesis !","hash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7"}]' }
+Entrée dans websocket.js:responseLatestMsg avec blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' } ]
+Sortie  de outils.js:getLatestElement result Block {
+  index: 0,
+  previousHash: '0',
+  timestamp: 1465154705,
+  data: 'mon bloc genesis !',
+  hash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' }
+Sortie  de websocket.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":0,"previousHash":"0","timestamp":1465154705,"data":"mon bloc genesis !","hash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7"}]' }
+
+ >>>>> Entrée dans websocket.js:write appelé par websocket.js:initMessageHandler avec ws.url undefined message { type: 2,
+  data:
+   '[{"index":0,"previousHash":"0","timestamp":1465154705,"data":"mon bloc genesis !","hash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7"}]' }
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"previousHash\":\"0\",\"timestamp\":1465154705,\"data\":\"mon bloc genesis !\",\"hash\":\"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7\"}]"}
+Dans websocket.js:initMessageHandler message.type 2
+Dans websocket.js:initMessageHandler appel de handleBlockchainResponse
+Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler message { type: 2,
+  data:
+   '[{"index":0,"previousHash":"0","timestamp":1465154705,"data":"mon bloc genesis !","hash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7"}]' }
+Dans websocket.js:handleBlockchainResponse Tous les Blocks reçus: [ { index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' } ]
+Dans websocket.js:handleBlockchainResponse Dernier Block stocké: Block {
+  index: 0,
+  previousHash: '0',
+  timestamp: 1465154705,
+  data: 'mon bloc genesis !',
+  hash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' }
+Dans websocket.js:handleBlockchainResponse Index du dernier block: 0
+Dans websocket.js:handleBlockchainResponse Index du block reçu: 0
+Dans websocket.js:handleBlockchainResponse La blockchain a reçu un block genesis (index = 0). Ne rien faire.
+Sortie  de websocket.js:handleBlockchainResponse
+
+---------------Bloc # 0 fin de handleBlockchainResponse ----------------------------
+Dans websocket.js:initHttpServer /mineBlock req.body { data: 'Donnees du premier block' }
+Entrée dans blockchain.js:generateNextBlock appelé par websocket.js:initHttpServer avec blockData Donnees du premier block
+Sortie  de outils.js:getLatestElement result Block {
+  index: 0,
+  previousHash: '0',
+  timestamp: 1465154705,
+  data: 'mon bloc genesis !',
+  hash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' }
+Entrée dans block:Block avec index 1
+Sortie  de  blockchain.js:generateNextBlock avec result Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Entrée dans blockchain.js:addBlock appelé par websocket.js:initHttpServer avec newBlock Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Sortie  de outils.js:getLatestElement result Block {
+  index: 0,
+  previousHash: '0',
+  timestamp: 1465154705,
+  data: 'mon bloc genesis !',
+  hash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' }
+Sortie  de  undefined:isValidNewBlock
+Sortie  de  blockchain.js:addBlock
+Entrée dans websocket.js:responseLatestMsg avec blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' },
+  Block {
+    index: 1,
+    previousHash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+    timestamp: 1572797340.995,
+    data: 'Donnees du premier block',
+    hash:
+     '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' } ]
+Sortie  de outils.js:getLatestElement result Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Sortie  de websocket.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572797340.995,"data":"Donnees du premier block","hash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e"}]' }
+Entrée dans websocket.js:broadcast appelé par websocket.js:initHttpServer avec message { type: 2,
+  data:
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572797340.995,"data":"Donnees du premier block","hash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e"}]' }
+
+ >>>>> Entrée dans websocket.js:write appelé par websocket.js:broadcast avec ws.url undefined message { type: 2,
+  data:
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572797340.995,"data":"Donnees du premier block","hash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e"}]' }
+Sortie  de  websocket.js:broadcast
+Dans websocket.js:initHttpServer block ajouté et diffusé : {"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572797340.995,"data":"Donnees du premier block","hash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e"}
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"previousHash\":\"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7\",\"timestamp\":1572797340.995,\"data\":\"Donnees du premier block\",\"hash\":\"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e\"}]"}
+Dans websocket.js:initMessageHandler message.type 2
+Dans websocket.js:initMessageHandler appel de handleBlockchainResponse
+Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler message { type: 2,
+  data:
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572797340.995,"data":"Donnees du premier block","hash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e"}]' }
+Dans websocket.js:handleBlockchainResponse Tous les Blocks reçus: [ { index: 1,
+    previousHash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+    timestamp: 1572797340.995,
+    data: 'Donnees du premier block',
+    hash:
+     '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' } ]
+Dans websocket.js:handleBlockchainResponse Dernier Block stocké: Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Dans websocket.js:handleBlockchainResponse Index du dernier block: 1
+Dans websocket.js:handleBlockchainResponse Index du block reçu: 1
+Dans websocket.js:handleBlockchainResponse La blockchain reçue est plus courte ( 1 ) que la blockchain actuelle ( 2 ). Ne rien faire.
+Sortie  de websocket.js:handleBlockchainResponse
+
+---------------Bloc # 1 fin de handleBlockchainResponse ----------------------------
+Dans websocket.js:initHttpServer /mineBlock req.body { data: 'Donnees du deuxième block' }
+Entrée dans blockchain.js:generateNextBlock appelé par websocket.js:initHttpServer avec blockData Donnees du deuxième block
+Sortie  de outils.js:getLatestElement result Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Entrée dans block:Block avec index 2
+Sortie  de  blockchain.js:generateNextBlock avec result Block {
+  index: 2,
+  previousHash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+  timestamp: 1572797342.281,
+  data: 'Donnees du deuxième block',
+  hash:
+   'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' }
+Entrée dans blockchain.js:addBlock appelé par websocket.js:initHttpServer avec newBlock Block {
+  index: 2,
+  previousHash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+  timestamp: 1572797342.281,
+  data: 'Donnees du deuxième block',
+  hash:
+   'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' }
+Sortie  de outils.js:getLatestElement result Block {
+  index: 1,
+  previousHash:
+   '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+  timestamp: 1572797340.995,
+  data: 'Donnees du premier block',
+  hash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' }
+Sortie  de  undefined:isValidNewBlock
+Sortie  de  blockchain.js:addBlock
+Entrée dans websocket.js:responseLatestMsg avec blockChain [ Block {
+    index: 0,
+    previousHash: '0',
+    timestamp: 1465154705,
+    data: 'mon bloc genesis !',
+    hash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7' },
+  Block {
+    index: 1,
+    previousHash:
+     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
+    timestamp: 1572797340.995,
+    data: 'Donnees du premier block',
+    hash:
+     '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e' },
+  Block {
+    index: 2,
+    previousHash:
+     '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+    timestamp: 1572797342.281,
+    data: 'Donnees du deuxième block',
+    hash:
+     'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' } ]
+Sortie  de outils.js:getLatestElement result Block {
+  index: 2,
+  previousHash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+  timestamp: 1572797342.281,
+  data: 'Donnees du deuxième block',
+  hash:
+   'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' }
+Sortie  de websocket.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":2,"previousHash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e","timestamp":1572797342.281,"data":"Donnees du deuxième block","hash":"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc"}]' }
+Entrée dans websocket.js:broadcast appelé par websocket.js:initHttpServer avec message { type: 2,
+  data:
+   '[{"index":2,"previousHash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e","timestamp":1572797342.281,"data":"Donnees du deuxième block","hash":"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc"}]' }
+
+ >>>>> Entrée dans websocket.js:write appelé par websocket.js:broadcast avec ws.url undefined message { type: 2,
+  data:
+   '[{"index":2,"previousHash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e","timestamp":1572797342.281,"data":"Donnees du deuxième block","hash":"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc"}]' }
+Sortie  de  websocket.js:broadcast
+Dans websocket.js:initHttpServer block ajouté et diffusé : {"index":2,"previousHash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e","timestamp":1572797342.281,"data":"Donnees du deuxième block","hash":"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc"}
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"previousHash\":\"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e\",\"timestamp\":1572797342.281,\"data\":\"Donnees du deuxième block\",\"hash\":\"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc\"}]"}
+Dans websocket.js:initMessageHandler message.type 2
+Dans websocket.js:initMessageHandler appel de handleBlockchainResponse
+Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler message { type: 2,
+  data:
+   '[{"index":2,"previousHash":"1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e","timestamp":1572797342.281,"data":"Donnees du deuxième block","hash":"dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc"}]' }
+Dans websocket.js:handleBlockchainResponse Tous les Blocks reçus: [ { index: 2,
+    previousHash:
+     '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+    timestamp: 1572797342.281,
+    data: 'Donnees du deuxième block',
+    hash:
+     'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' } ]
+Dans websocket.js:handleBlockchainResponse Dernier Block stocké: Block {
+  index: 2,
+  previousHash:
+   '1f74f730ca6524715bc6393b37712d18270a671231b330490d37d0f488da6f9e',
+  timestamp: 1572797342.281,
+  data: 'Donnees du deuxième block',
+  hash:
+   'dee3307d1506044d19faa0f460a490daaa5355219128f18f1b49427b070df5cc' }
+Dans websocket.js:handleBlockchainResponse Index du dernier block: 2
+Dans websocket.js:handleBlockchainResponse Index du block reçu: 2
+Dans websocket.js:handleBlockchainResponse La blockchain reçue est plus courte ( 1 ) que la blockchain actuelle ( 3 ). Ne rien faire.
+Sortie  de websocket.js:handleBlockchainResponse
+
+---------------Bloc # 2 fin de handleBlockchainResponse ----------------------------
