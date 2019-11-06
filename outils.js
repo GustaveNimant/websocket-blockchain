@@ -1,4 +1,6 @@
 'use strict';
+var D = require('./debug');
+
 var CryptoJS = require("crypto-js");
 
 var ModuleName = 'outils.js';
@@ -22,6 +24,7 @@ function errorMessage (expected, found, cure, caller) {
 }
 function functionNameJS (mod) {
     var stack = new Error().stack;
+
     if (mod === "main") {
 	var caller = ((stack.split('at ')[2]).split(' ')[0]);
     }
@@ -45,15 +48,15 @@ function functionNameJS (mod) {
 function getLatestElement (elementArray) {
     var here = functionNameJS(ModuleName);
     var result = elementArray[elementArray.length - 1];
-    console.log('Sortie  de',here,'result',result)
+//    if (D.debug) {console.log('Sortie  de',here,'result',result);}
     return result;
 };
 
 function isValidEmail (email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	var result = (re.test(String(email).toLowerCase()));
-	console.log('result',result);
-	return result;
+    var result = (re.test(String(email).toLowerCase()));
+    if (D.debug) {console.log('result',result);}
+    return result;
     }
 
 

@@ -1,11 +1,12 @@
+ach@iab>HTTP_PORT=3001 P2P_PORT=6001 npm start
 
 > blockchain@1.0.0 start /home/achadde/sources/javascript/websocket-blockchain
 > nodemon main.js
 
-[33m[nodemon] 1.19.1[39m
-[33m[nodemon] to restart at any time, enter `rs`[39m
-[33m[nodemon] watching: *.*[39m
-[32m[nodemon] starting `node main.js`[39m
+[nodemon] 1.19.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node main.js`
 
 Dans main InitialPeers []
 
@@ -93,7 +94,7 @@ Dans websocket.js:handleBlockchainResponse La blockchain a reçu un block genesi
 Sortie  de websocket.js:handleBlockchainResponse
 
 ===== Bloc # 0 fin de handleBlockchainResponse =====
-     dans websocket.js:initHttpServer /mineBlock avec req.body { data: 'Donnees du premier block' }
+^[[A^[[B     dans websocket.js:initHttpServer /mineBlock avec req.body { data: 'Donnees du premier block' }
 Entrée dans blockchain.js:generateNextBlock appelé par websocket.js:initHttpServer avec blockData Donnees du premier block
 
 Entrée dans block:Block constructor avec index 1 
@@ -102,55 +103,55 @@ Sortie  de blockchain.js:generateNextBlock avec result Block {
   index: 1,
   previousHash:
    '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
-  timestamp: 1572854439.335,
+  timestamp: 1572973756.936,
   data: 'Donnees du premier block',
   hash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a' }
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f' }
 
 Entrée dans blockchain.js:addBlock appelé par websocket.js:initHttpServer avec newBlock Block {
   index: 1,
   previousHash:
    '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
-  timestamp: 1572854439.335,
+  timestamp: 1572973756.936,
   data: 'Donnees du premier block',
   hash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a' }
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f' }
 Sortie  de blockchain.js:isValidNewBlock result true
 Sortie  de blockchain.js:addBlock
 Entrée dans websocket.js:responseLatestMsg avec une blockChain de 2 blocs
 Sortie  de websocket.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572854439.335,"data":"Donnees du premier block","hash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a"}]' }
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572973756.936,"data":"Donnees du premier block","hash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f"}]' }
 Entrée dans websocket.js:broadcast appelé par websocket.js:initHttpServer avec message { type: 2,
   data:
-   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572854439.335,"data":"Donnees du premier block","hash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a"}]' }
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572973756.936,"data":"Donnees du premier block","hash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f"}]' }
 Entrée dans websocket.js:write appelé par websocket.js:broadcast avec ws.url undefined message { type: 2,
   data:
-   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572854439.335,"data":"Donnees du premier block","hash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a"}]' }
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572973756.936,"data":"Donnees du premier block","hash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f"}]' }
 Sortie  de websocket.js:write
 Sortie  de websocket.js:broadcast
-Dans websocket.js:initHttpServer ajout et diffusion du bloc {"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572854439.335,"data":"Donnees du premier block","hash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a"}
-Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"previousHash\":\"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7\",\"timestamp\":1572854439.335,\"data\":\"Donnees du premier block\",\"hash\":\"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a\"}]"}
+Dans websocket.js:initHttpServer ajout et diffusion du bloc {"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572973756.936,"data":"Donnees du premier block","hash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f"}
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"previousHash\":\"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7\",\"timestamp\":1572973756.936,\"data\":\"Donnees du premier block\",\"hash\":\"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f\"}]"}
 Dans websocket.js:initMessageHandler message.type 2
 Dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 /nEntrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler message { type: 2,
   data:
-   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572854439.335,"data":"Donnees du premier block","hash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a"}]' }
+   '[{"index":1,"previousHash":"816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7","timestamp":1572973756.936,"data":"Donnees du premier block","hash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f"}]' }
 Dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 1,
     previousHash:
      '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
-    timestamp: 1572854439.335,
+    timestamp: 1572973756.936,
     data: 'Donnees du premier block',
     hash:
-     'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a' } ]
+     'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f' } ]
 Dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: Block {
   index: 1,
   previousHash:
    '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7',
-  timestamp: 1572854439.335,
+  timestamp: 1572973756.936,
   data: 'Donnees du premier block',
   hash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a' }
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f' }
 Dans websocket.js:handleBlockchainResponse Index du dernier block: 1
 Dans websocket.js:handleBlockchainResponse Index du block    reçu: 1
 Dans websocket.js:handleBlockchainResponse La blockchain reçue est plus courte ( 1 ) que la blockchain actuelle ( 2 ). Ne rien faire.
@@ -165,59 +166,60 @@ Entrée dans block:Block constructor avec index 2
 Sortie  de blockchain.js:generateNextBlock avec result Block {
   index: 2,
   previousHash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a',
-  timestamp: 1572854441.056,
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f',
+  timestamp: 1572973779.36,
   data: 'Donnees du deuxième block',
   hash:
-   '20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8' }
+   '8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b' }
 
 Entrée dans blockchain.js:addBlock appelé par websocket.js:initHttpServer avec newBlock Block {
   index: 2,
   previousHash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a',
-  timestamp: 1572854441.056,
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f',
+  timestamp: 1572973779.36,
   data: 'Donnees du deuxième block',
   hash:
-   '20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8' }
+   '8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b' }
 Sortie  de blockchain.js:isValidNewBlock result true
 Sortie  de blockchain.js:addBlock
 Entrée dans websocket.js:responseLatestMsg avec une blockChain de 3 blocs
 Sortie  de websocket.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":2,"previousHash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a","timestamp":1572854441.056,"data":"Donnees du deuxième block","hash":"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8"}]' }
+   '[{"index":2,"previousHash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f","timestamp":1572973779.36,"data":"Donnees du deuxième block","hash":"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b"}]' }
 Entrée dans websocket.js:broadcast appelé par websocket.js:initHttpServer avec message { type: 2,
   data:
-   '[{"index":2,"previousHash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a","timestamp":1572854441.056,"data":"Donnees du deuxième block","hash":"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8"}]' }
+   '[{"index":2,"previousHash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f","timestamp":1572973779.36,"data":"Donnees du deuxième block","hash":"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b"}]' }
 Entrée dans websocket.js:write appelé par websocket.js:broadcast avec ws.url undefined message { type: 2,
   data:
-   '[{"index":2,"previousHash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a","timestamp":1572854441.056,"data":"Donnees du deuxième block","hash":"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8"}]' }
+   '[{"index":2,"previousHash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f","timestamp":1572973779.36,"data":"Donnees du deuxième block","hash":"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b"}]' }
 Sortie  de websocket.js:write
 Sortie  de websocket.js:broadcast
-Dans websocket.js:initHttpServer ajout et diffusion du bloc {"index":2,"previousHash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a","timestamp":1572854441.056,"data":"Donnees du deuxième block","hash":"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8"}
-Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"previousHash\":\"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a\",\"timestamp\":1572854441.056,\"data\":\"Donnees du deuxième block\",\"hash\":\"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8\"}]"}
+Dans websocket.js:initHttpServer ajout et diffusion du bloc {"index":2,"previousHash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f","timestamp":1572973779.36,"data":"Donnees du deuxième block","hash":"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b"}
+Dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"previousHash\":\"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f\",\"timestamp\":1572973779.36,\"data\":\"Donnees du deuxième block\",\"hash\":\"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b\"}]"}
 Dans websocket.js:initMessageHandler message.type 2
 Dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 /nEntrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler message { type: 2,
   data:
-   '[{"index":2,"previousHash":"f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a","timestamp":1572854441.056,"data":"Donnees du deuxième block","hash":"20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8"}]' }
+   '[{"index":2,"previousHash":"e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f","timestamp":1572973779.36,"data":"Donnees du deuxième block","hash":"8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b"}]' }
 Dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 2,
     previousHash:
-     'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a',
-    timestamp: 1572854441.056,
+     'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f',
+    timestamp: 1572973779.36,
     data: 'Donnees du deuxième block',
     hash:
-     '20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8' } ]
+     '8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b' } ]
 Dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: Block {
   index: 2,
   previousHash:
-   'f806c05bd740fed8a8ea41d2a4f6cd3914f0398ccd3b34c6a6c8f9d11519509a',
-  timestamp: 1572854441.056,
+   'e2fea0fc39412c6007d409a0213518921979c99a618748fa30723276eca6095f',
+  timestamp: 1572973779.36,
   data: 'Donnees du deuxième block',
   hash:
-   '20f9be810c563c87b4060d241e23d2e83765d491231aea2f08670d7a8625e2f8' }
+   '8f6eac5bcb29fd115e204854586570c4b9db7d4a6558b9c63322c76410ed3e0b' }
 Dans websocket.js:handleBlockchainResponse Index du dernier block: 2
 Dans websocket.js:handleBlockchainResponse Index du block    reçu: 2
 Dans websocket.js:handleBlockchainResponse La blockchain reçue est plus courte ( 1 ) que la blockchain actuelle ( 3 ). Ne rien faire.
 Sortie  de websocket.js:handleBlockchainResponse
 
 ===== Bloc # 2 fin de handleBlockchainResponse =====
+

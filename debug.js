@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
-    debug : process.env.NODE_DEBUG
+    debug : process.env.NODE_DEBUG || false
 };
