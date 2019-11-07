@@ -20,20 +20,7 @@ var app = express();
 console.log ('\nDans',here,'InitialPeers',InitialPeers);
 const {Block} = require ('./block.js');
 
-var getGenesisBlock = () => {
-    var nextHash = O.calculateHash(0, "hash vide", nextTimestamp, "mon bloc génésis");
-    var nextTimestamp = new Date().getTime() / 1000;
-
-    return new Block(0,
-		     "texte",
-		     "mon bloc genesis",
-		     nextTimestamp,
-		     "clé publique",
-		     "hash vide",
-		     nextHash)
-};
-
-A.blockChain = [getGenesisBlock()];
+A.blockChain = [B.getGenesisBlock()];
 
 A.socket_a = [];
 

@@ -13,4 +13,4 @@ then
     exit 1
 fi
 
-curl -H "Content-type:application/json" --data '{"contenu" : "Donnees du premier block"}' http://localhost:${port}/mineBlock
+curl -H "Content-type:application/json" --data '{"contenu" : "Données du premier block de websocket-blockchain"}' http://localhost:${port}/mineBlock

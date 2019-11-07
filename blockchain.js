@@ -17,6 +17,19 @@ var addBlock = (newBlock, caller) => {
     console.log('Sortie  de',here);
 };
 
+var getGenesisBlock = () => {
+    var nextHash = O.calculateHash(0, "hash vide", nextTimestamp, "mon bloc génésis");
+    var nextTimestamp = new Date().getTime() / 1000;
+
+    return new Block(0,
+		     "texte",
+		     "bloc genesis de websocket-blockchain",
+		     nextTimestamp,
+		     "clé publique",
+		     "hash vide",
+		     nextHash)
+};
+
 var getLatestBlock = () => O.getLatestElement(A.blockChain);
 
 var isValidChain = (blockchainToValidate) => {
@@ -24,6 +37,8 @@ var isValidChain = (blockchainToValidate) => {
     console.log('Entrée dans',here,'avec blockchainToValidate',blockchainToValidate);
 
     if (JSON.stringify(blockchainToValidate[0]) !== JSON.stringify(getGenesisBlock())) {
+	console.log('\nErreur dans',here,'blockchainToValidate[0]',blockchainToValidate[0]);
+	console.log('Erreur dans',here,'mais blockGenesis',JSON.stringify(getGenesisBlock()),'\n');
         return false;
     }
     var tempBlocks = [blockchainToValidate[0]];
@@ -79,5 +94,6 @@ var replaceChain = (newBlocks, caller) => {
 };
 
 module.exports.addBlock = addBlock;
+module.exports.getGenesisBlock = getGenesisBlock;
 module.exports.getLatestBlock = getLatestBlock;
 module.exports.replaceChain = replaceChain;

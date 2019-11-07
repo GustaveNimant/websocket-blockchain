@@ -9,8 +9,8 @@ function calculateHashForBlock (block) {
     return calculateHash(block.index, block.hashPrecedent, block.horodatage, block.contenu);
 };
 
-function calculateHash (index, hashPrecedent, horodatage, data) {
-    return CryptoJS.SHA256(index + hashPrecedent + horodatage + data).toString();
+function calculateHash (index, hashPrecedent, horodatage, contenu) {
+    return CryptoJS.SHA256(index + hashPrecedent + horodatage + contenu).toString();
 };
 
 function errorMessage (expected, found, cure, caller) {
