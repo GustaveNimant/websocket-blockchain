@@ -6,11 +6,11 @@ var CryptoJS = require("crypto-js");
 var ModuleName = 'outils.js';
 
 function calculateHashForBlock (block) {
-    return calculateHash(block.index, block.previousHash, block.timestamp, block.data);
+    return calculateHash(block.index, block.hashPrecedent, block.horodatage, block.contenu);
 };
 
-function calculateHash (index, previousHash, timestamp, data) {
-    return CryptoJS.SHA256(index + previousHash + timestamp + data).toString();
+function calculateHash (index, hashPrecedent, horodatage, data) {
+    return CryptoJS.SHA256(index + hashPrecedent + horodatage + data).toString();
 };
 
 function errorMessage (expected, found, cure, caller) {

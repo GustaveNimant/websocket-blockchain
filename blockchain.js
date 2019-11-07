@@ -42,20 +42,22 @@ var isValidChain = (blockchainToValidate) => {
 
 var isValidNewBlock = (newBlock, previousBlock, caller) => {
     var here = O.functionNameJS (ModuleName);
-    // console.log('Entrée dans',here,'appelé par',caller,'avec newBlock',newBlock,'previousBlock',previousBlock);
+    console.log('Entrée dans',here,'appelé par',caller,'avec newBlock',newBlock,'previousBlock',previousBlock);
     
     if (previousBlock.index + 1 !== newBlock.index) {
         console.log('Dans',here,'index invalide previousBlock.index',previousBlock.index,'newBlock.index',newBlock.index);
 	('Sortie  de',here);
         return false;
-    } else if (previousBlock.hash !== newBlock.previousHash) {
-        console.log('previousHash invalide');
-	console.log('Sortie  de',here);
+    } else if (previousBlock.hashCourant !== newBlock.hashPrecedent) {
+	console.log('\nErreur dans',here,'previousBlock.hashCourant',previousBlock.hashCourant)
+        console.log('Erreur différe de newBlock.hashPrecedent',newBlock.hashPrecedent);
+	console.log('\nSortie  de',here);
         return false;
-    } else if (O.calculateHashForBlock(newBlock) !== newBlock.hash) {
-        console.log(typeof (newBlock.hash) + ' ' + typeof O.calculateHashForBlock(newBlock));
-        console.log('Dans',here,'hash invalide',O.calculateHashForBlock(newBlock) + ' ' + newBlock.hash);
-	console.log('Sortie  de',here);
+    } else if (O.calculateHashForBlock(newBlock) !== newBlock.hashCourant) {
+        console.log(typeof (newBlock.hashCourant) + ' ' + typeof O.calculateHashForBlock(newBlock));
+        console.log('\nErreur dans',here,'hashCourant',O.calculateHashForBlock(newBlock))
+	console.log('Erreur est différent de newBlock.hashCourant',newBlock.hashCourant);
+	console.log('\nSortie  de',here);
         return false;
     }
     console.log('Sortie  de',here,'result true');

@@ -21,7 +21,16 @@ console.log ('\nDans',here,'InitialPeers',InitialPeers);
 const {Block} = require ('./block.js');
 
 var getGenesisBlock = () => {
-    return new Block(0, "0", 1465154705, "mon bloc genesis !", "816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7");
+    var nextHash = O.calculateHash(0, "hash vide", nextTimestamp, "mon bloc génésis");
+    var nextTimestamp = new Date().getTime() / 1000;
+
+    return new Block(0,
+		     "texte",
+		     "mon bloc genesis",
+		     nextTimestamp,
+		     "clé publique",
+		     "hash vide",
+		     nextHash)
 };
 
 A.blockChain = [getGenesisBlock()];

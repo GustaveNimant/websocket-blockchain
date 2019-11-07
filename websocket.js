@@ -51,9 +51,15 @@ var generateNextBlock = (blockData, caller) => {
     var previousBlock = B.getLatestBlock();
     var nextIndex = previousBlock.index + 1;
     var nextTimestamp = new Date().getTime() / 1000;
-    var nextHash = O.calculateHash(nextIndex, previousBlock.hash, nextTimestamp, blockData);
+    var nextHash = O.calculateHash(nextIndex, previousBlock.hashCourant, nextTimestamp, blockData);
 
-    var result = new Block(nextIndex, previousBlock.hash, nextTimestamp, blockData, nextHash); 
+    var result = new Block(nextIndex,
+			   "texte",
+			   blockData,
+			   nextTimestamp,
+			   "clé publique",
+			   previousBlock.hashCourant,
+			   nextHash); 
     console.log('Sortie  de',here,'avec result',result);
 
     return result; 
@@ -61,7 +67,7 @@ var generateNextBlock = (blockData, caller) => {
 
 var handleBlockchainResponse = (message, caller) => {
     var here = O.functionNameJS(ModuleName);
-    console.log('/nEntrée dans',here,'appelé par',caller,'message',message);
+    console.log('\nEntrée dans',here,'appelé par',caller,'message',message);
 
     /* tri sur les indices */
     var receivedBlocks = JSON.parse(message.data).sort((b1, b2) => (b1.index - b2.index));
@@ -77,7 +83,7 @@ var handleBlockchainResponse = (message, caller) => {
     if (latestBlockReceived.index > latestBlockHeld.index) {
         console.log('Dans',here,'Dernier block de la blockchain : ' + latestBlockHeld.index + '. Block reçu par le pair : ' + latestBlockReceived.index);
 	
-        if (latestBlockHeld.hash === latestBlockReceived.previousHash) {
+        if (latestBlockHeld.hashCourant === latestBlockReceived.hashPrecedent) {
             console.log('Dans',here,'Les Hashes correspondent.Nous pouvons appondre le block reçu à notre chaîne et le diffuser');
             A.blockChain.push (latestBlockReceived);
             broadcast (responseLatestMsg(), here);
@@ -139,7 +145,7 @@ var initHttpServer = (http_port, app, caller) => {
     
     app.post('/mineBlock', (req, res) => {
 	console.log('     dans',here,'/mineBlock avec req.body',req.body);
-        var newBlock = generateNextBlock(req.body.data, A.blockChain, here);
+        var newBlock = generateNextBlock(req.body.contenu, here);
         B.addBlock(newBlock, here);
         broadcast(responseLatestMsg(), here);
         console.log('Dans',here,'ajout et diffusion du bloc',JSON.stringify(newBlock));

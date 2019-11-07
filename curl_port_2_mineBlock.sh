@@ -13,4 +13,4 @@ then
     exit 1
 fi
 
-curl -H "Content-type:application/json" --data '{"data" : "Donnees du deuxième block"}' http://localhost:${port}/mineBlock
+curl -H "Content-type:application/json" --data '{"contenu" : "Donnees du deuxième block"}' http://localhost:${port}/mineBlock
