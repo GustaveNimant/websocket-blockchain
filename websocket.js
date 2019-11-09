@@ -155,8 +155,10 @@ var initHttpServer = (http_port, app, caller) => {
 
     app.use(bodyParser.json());
 
-    app.get('/blocks', (req, res) =>
-	    res.send(JSON.stringify(B.blockchain)));
+    app.get('/blocks', (req, res) => {
+	console.log('     dans',here,'/blocks avec req.body',req.body);
+	    res.send(JSON.stringify(A.blockChain));
+	   });
     
     app.post('/mineBlock', (req, res) => {
 	console.log('     dans',here,'/mineBlock avec req.body',req.body);
