@@ -16,14 +16,14 @@ var connectToPeers = (newPeers, caller) => {
     console.log('Entrée dans',here,'appelé par',caller,'avec',newPeers.length,'newPeers');
 
     newPeers.forEach((peerUrl) => {
-	console.log('Dans',here,'boucle sur peerUrl',peerUrl);
+	console.log('dans',here,'boucle sur peerUrl',peerUrl);
         var ws = new WebSocket(peerUrl);
 	
-	console.log('Dans',here,'création de ws.url',ws.url)
-	console.log('Dans',here,'ws.readyState',ws.readyState)
+	console.log('dans',here,'création de ws.url',ws.url)
+	console.log('dans',here,'ws.readyState',ws.readyState)
         ws.on('open', () => initConnection(ws, here));
         ws.on('error', () => {
-            console.log('Dans',here,'échec de la connexion à ws',ws.url)
+            console.log('dans',here,'échec de la connexion à ws',ws.url)
         });
     });
     console.log('Sortie  de ',here);
@@ -62,12 +62,12 @@ var handleBlockchainResponse = (message, caller) => {
     var latestBlockHeld = A.blockChain[A.blockChain.length - 1];
 
     console.log('\n');
-    console.log('Dans',here,'Tous les Blocs reçus:',receivedBlocks);
+    console.log('dans',here,'Tous les Blocs reçus:',receivedBlocks);
         console.log('\n');
-    console.log('Dans',here,'Dernier  Bloc stocké:',latestBlockHeld);
+    console.log('dans',here,'Dernier  Bloc stocké:',latestBlockHeld);
     console.log('\n');
-    console.log('Dans',here,'Index du dernier block:',latestBlockHeld.index);
-    console.log('Dans',here,'Index du block    reçu:',latestBlockReceived.index);
+    console.log('dans',here,'Index du dernier block:',latestBlockHeld.index);
+    console.log('dans',here,'Index du block    reçu:',latestBlockReceived.index);
     console.log('\n');
     
     
@@ -76,25 +76,25 @@ var handleBlockchainResponse = (message, caller) => {
 	console.log('dans',here,'index du bloc reçu par le pair :',latestBlockReceived.index);
 	
         if (latestBlockHeld.hashCourant === latestBlockReceived.hashPrecedent) {
-            console.log('Dans',here,'Les Hashes correspondent. Nous pouvons appondre le bloc reçu à notre chaîne et le diffuser');
+            console.log('dans',here,'Les Hashes correspondent. Nous pouvons appondre le bloc reçu à notre chaîne et le diffuser');
             A.blockChain.push (latestBlockReceived);
             B.broadcast (B.responseLatestMsg(), here);
         } else if (receivedBlocks.length === 1) {
-            console.log('Dans',here,'Le block reçu a une longueur de 1. Nous devons interroger notre chaîne depuis notre pair');
+            console.log('dans',here,'Le block reçu a une longueur de 1. Nous devons interroger notre chaîne depuis notre pair');
             B.broadcast(queryAllMsg(), here);
         } else {
-            console.log('Dans',here,'La blockchain reçue est plus longue (',receivedBlocks.length,') que la blockchain actuelle (',latestBlockHeld.index,') la remplacer');
+            console.log('dans',here,'La blockchain reçue est plus longue (',receivedBlocks.length,') que la blockchain actuelle (',latestBlockHeld.index,') la remplacer');
             B.replaceChain(receivedBlocks, here);
         }
     } else {
 	if (latestBlockReceived.index == 0) {
-            console.log('Dans',here,'La blockchain a reçu un Bloc Genesis (index = 0)');
+            console.log('dans',here,'La blockchain a reçu un Bloc Genesis (index = 0)');
 	    if (latestBlockReceived.horodatage < latestBlockHeld.horodatage) {
-		console.log('Dans',here,'l\'horodatage du Bloc reçu (',latestBlockReceived.horodatage,') < à celui Bloc courant (',latestBlockHeld.horodatage,') le remplacer');
+		console.log('dans',here,'l\'horodatage du Bloc reçu (',latestBlockReceived.horodatage,') < à celui Bloc courant (',latestBlockHeld.horodatage,') le remplacer');
 		B.replaceChain(receivedBlocks, here);
 	    }
 	} else {
-	    console.log('Dans',here,'La blockchain reçue est plus courte (',receivedBlocks.length,') que la blockchain actuelle (',latestBlockHeld.index+1,'). Ne rien faire.');
+	    console.log('dans',here,'La blockchain reçue est plus courte (',receivedBlocks.length,') que la blockchain actuelle (',latestBlockHeld.index+1,'). Ne rien faire.');
 	}
     }
     console.log('\n');
@@ -140,7 +140,7 @@ var initErrorHandler = (ws, caller) => {
     console.log('Entrée dans',here,'appelé par',caller);
 
     var closeConnection = (ws) => {
-        console.log('Dans',here,'échec de la connexion au pair ws.url', ws.url);
+        console.log('dans',here,'échec de la connexion au pair ws.url', ws.url);
         A.socket_a.splice(A.socket_a.indexOf(ws), 1);
     };
     ws.on('close', () => closeConnection(ws));
@@ -165,22 +165,23 @@ var initHttpServer = (http_port, app, caller) => {
         var newBlock = generateNextBlock(req.body.contenu, here);
         B.addBlock(newBlock, here);
         B.broadcast(B.responseLatestMsg(), here);
-        console.log('Dans',here,'ajout et diffusion du bloc',JSON.stringify(newBlock));
+        console.log('dans',here,'ajout et diffusion du bloc',JSON.stringify(newBlock));
         res.send();
     });
     app.get('/peers', (req, res) => {
-	console.log('Dans',here,'/peers req.body',req.body);
+	console.log('dans',here,'/peers req.body',req.body);
         res.send(A.socket_a.map(s => s._socket.remoteAddress + ':' + s._socket.remotePort));
     });
     app.post('/addPeer', (req, res) => {
-	console.log('Dans',here,'/addPeer req.body',req.body);
+	console.log('\n');
+	console.log('dans',here,'/addPeer req.body',req.body);
         connectToPeers([req.body.peer], here);
         res.send();
     });
     
     app.listen(http_port, () => {
 	console.log('\n');
-	console.log('===== Dans',here,'Écoute sur le port HTTP', http_port,'=====');}
+	console.log('===== dans',here,'Écoute sur le port HTTP', http_port,'=====');}
 	      );
 
     console.log('      Sortie  de',here);
@@ -205,21 +206,21 @@ var initMessageHandler = (ws, caller) => {
     ws.on('message', (data) => {
         var message = JSON.parse(data);
 
-        console.log('Dans',here,'ws.on Message Reçu data',data);
-	console.log('Dans',here,'message.type',message.type);
+        console.log('dans',here,'ws.on Message Reçu data',data);
+	console.log('dans',here,'message.type',message.type);
 	console.log('\n');
 	
         switch (message.type) {
         case B.MessageType.QUERY_LATEST:
-	    console.log('Dans',here,'write dans',ws.url,'de responseLatestMsg', B.responseLatestMsg());
+	    console.log('dans',here,'write dans',ws.url,'de responseLatestMsg', B.responseLatestMsg());
             B.write(ws, B.responseLatestMsg(), here);
             break;
         case B.MessageType.QUERY_ALL:
-	    console.log('Dans',here,'appel de responseChainMsg');
+	    console.log('dans',here,'appel de responseChainMsg');
             B.write(ws, B.responseChainMsg(), here);
             break;
         case B.MessageType.RESPONSE_BLOCKCHAIN:
-	    console.log('Dans',here,'appel de handleBlockchainResponse');
+	    console.log('dans',here,'appel de handleBlockchainResponse');
             handleBlockchainResponse (message, here)
             break;
         }

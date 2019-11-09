@@ -85,10 +85,10 @@ var isValidChain = (blockchainToValidate) => {
     var tempBlocks = [blockchainToValidate[0]];
     for (var i = 1; i < blockchainToValidate.length; i++) {
         if (isValidNewBlock (blockchainToValidate[i], tempBlocks[i - 1], here)) {
-	    console.log('Dans',here,'bloc #',i,'est validé');
+	    console.log('dans',here,'bloc #',i,'est validé');
             tempBlocks.push(blockchainToValidate[i]);
         } else {
-	    console.log('Dans',here,'bloc #',i,'est invalide');
+	    console.log('dans',here,'bloc #',i,'est invalide');
             return false;
         }
     }
@@ -104,7 +104,7 @@ var isValidNewBlock = (newBlock, previousBlock, caller) => {
     console.log('Entrée dans',here,'avec previousBlock',previousBlock);
     
     if (previousBlock.index + 1 !== newBlock.index) {
-        console.log('Dans',here,'index invalide previousBlock.index',previousBlock.index,'newBlock.index',newBlock.index);
+        console.log('dans',here,'index invalide previousBlock.index',previousBlock.index,'newBlock.index',newBlock.index);
 	('Sortie  de',here);
         return false;
     } else if (previousBlock.hashCourant !== newBlock.hashPrecedent) {
