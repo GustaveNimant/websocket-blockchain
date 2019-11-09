@@ -10,14 +10,18 @@ var O = require("./outils");
 
 var ModuleName = 'main';
 var here = 'main';
-
+var date = new Date();
+    
 var http_port = process.env.HTTP_PORT || 3001;
 var p2p_port = process.env.P2P_PORT || 6001;
 var InitialPeers = process.env.PEERS ? process.env.PEERS.split(',') : [];
 
 var app = express();
 
-console.log ('\nDans',here,'InitialPeers',InitialPeers);
+console.log ('\n');
+console.log ('Date:',date);
+console.log ('dans',here,'InitialPeers',InitialPeers);
+
 const {Block} = require ('./block.js');
 
 A.blockChain = [B.getGenesisBlock()];

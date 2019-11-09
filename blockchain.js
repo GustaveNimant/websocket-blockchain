@@ -15,6 +15,7 @@ var MessageType = {
 
 var addBlock = (newBlock, caller) => {
     var here = O.functionNameJS (ModuleName);
+    console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller)
     console.log('Entrée dans',here,'avec newBlock',newBlock)
 
@@ -30,25 +31,31 @@ var broadcast = (message, caller) => {
     console.log('Entrée dans',here,'appelé par',caller,'avec message',message)
     console.log('dans',here,'il y a',A.socket_a.length,'sockets');
 
-    A.socket_a.forEach (soc =>
-			write(soc, message, here)
-		       );
+    A.socket_a.forEach (soc => {
+	console.log('dans',here,'socket écrit');
+	write(soc, message, here)
+    });
     console.log('Sortie  de',here);
 }
 
 var getGenesisBlock = () => {
+    var here = O.functionNameJS(ModuleName);
+    console.log('\n');
     var nextHash = O.calculateHash(0, "hash vide", nextTimestamp, "mon bloc génésis");
     var nextTimestamp = new Date().getTime() / 1000;
     var http_port = process.env.HTTP_PORT;
     var p2p_port = process.env.P2P_PORT;
     var contenu = "Bloc Genesis de websocket-blockchain http " + http_port + " p2p " + p2p_port;
-    return new Block(0,
+    var result = new Block(0,
 		     "texte",
 		     contenu,
 		     nextTimestamp,
 		     "clé publique",
 		     "hash vide",
-		     nextHash)
+		       nextHash);
+    
+    console.log('Sortie  de',here,'avec result',result);
+    return result;
 };
 
 var getLatestBlock = () => O.getLatestElement(A.blockChain);

@@ -12,7 +12,8 @@ const {Block} = require ('./block.js');
 var ModuleName = 'websocket.js';
 
 var connectToPeers = (newPeers, caller) => {
-    var here = O.functionNameJS(ModuleName); 
+    var here = O.functionNameJS(ModuleName);
+    console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller,'avec',newPeers.length,'newPeers');
 
     newPeers.forEach((peerUrl) => {
@@ -31,6 +32,7 @@ var connectToPeers = (newPeers, caller) => {
 
 var generateNextBlock = (blockData, caller) => {
     var here = O.functionNameJS(ModuleName);
+    console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller,'avec blockData',blockData);
 
     var previousBlock = B.getLatestBlock();
@@ -111,14 +113,15 @@ var initConnection = (ws, caller) => {
     console.log('\n');
     console.log('===== Entrée dans',here,'appelé par',caller,'=====');
     console.log('\n');
-    console.log('===== Entrée dans',here,'nouvelle connexion à',ws.url,'=====');
+      console.log('===== Entrée dans',here,'nouvelle connexion à',ws.url,'=====');
 
-    if (ws == undefined ) {
+    if (ws.url == undefined ) {
 	console.log('\n');
 	console.log('WARNING dans',here,'ws est undefined');
     }
-    
+
     A.socket_a.push(ws);
+
     console.log('\n');
     console.log('dans',here,'ws pour ws.url',ws.url,'ajouté à A.socket_a');
     console.log('dans',here,'socket_a a',A.socket_a.length,'sockets');
@@ -131,14 +134,16 @@ var initConnection = (ws, caller) => {
     console.log('dans',here,'écriture de queryChainLengthMsg',queryChainLengthMsg(),'dans ws.url',ws.url);
     
     B.write(ws, queryChainLengthMsg(), here);
+    
     console.log('      Sortie  de',here);
+    console.log('\n');
 };
 
 var initErrorHandler = (ws, caller) => {
     var here = O.functionNameJS (ModuleName);
     console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller);
-
+    
     var closeConnection = (ws) => {
         console.log('dans',here,'échec de la connexion au pair ws.url', ws.url);
         A.socket_a.splice(A.socket_a.indexOf(ws), 1);
