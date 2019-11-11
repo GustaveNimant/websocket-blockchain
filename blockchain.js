@@ -32,7 +32,7 @@ var broadcast = (message, caller) => {
     console.log('dans',here,'il y a',A.socket_a.length,'sockets');
 
     A.socket_a.forEach (soc => {
-	console.log('dans',here,'socket écrit');
+	console.log('dans',here,'écriture du message dans le socket');
 	write(soc, message, here)
     });
     console.log('Sortie  de',here);

@@ -221,7 +221,7 @@ var initMessageHandler = (ws, caller) => {
             B.write(ws, B.responseLatestMsg(), here);
             break;
         case B.MessageType.QUERY_ALL:
-	    console.log('dans',here,'appel de responseChainMsg');
+	    console.log('dans',here,'write dans',ws.url,'de responseChainMsg', B.responseChainMsg());
             B.write(ws, B.responseChainMsg(), here);
             break;
         case B.MessageType.RESPONSE_BLOCKCHAIN:
