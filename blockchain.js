@@ -68,6 +68,7 @@ var isValidChain = (blockchainToValidate) => {
     var genesisBlockCurrent = getGenesisBlock();
     
     if (JSON.stringify(genesisBlockToValidate) !== JSON.stringify(genesisBlockCurrent)) {
+	console.log('\n');
 	console.log('dans',here,'genesisBlockToValidate',genesisBlockToValidate);
 	console.log('dans',here,'tandis que genesisBlockCurrent',genesisBlockCurrent);
 
@@ -80,6 +81,7 @@ var isValidChain = (blockchainToValidate) => {
 	} else {
 	    console.log('\n');
 	    console.log('Erreur dans',here,'genesisBlockToValidate.horodatage',genesisBlockToValidate.horodatage);
+	    console.log('\n');
 	    console.log('Erreur dans',here,'tandis que genesisBlockCurrent.horodatage',genesisBlockCurrent.horodatage);
 	    console.log('\n');
 	    console.log('Sortie  de',here);
@@ -143,13 +145,13 @@ var replaceChain = (newBlocks, caller) => {
     console.log('dans',here,'blockChain.length',A.blockChain.length);
     
     if (isValidChain(newBlocks) && newBlocks.length > A.blockChain.length) {
-        console.log('La blockchain reçue est valide.');
-        console.log('Remplacer la blockchain actuelle par la blockchain reçue.');
+        console.log('dans',here,'La blockchain reçue est valide.');
+        console.log('dans',here,'Remplacer la blockchain actuelle par la blockchain reçue.');
         A.blockChain = newBlocks;
         broadcast(responseLatestMsg(), here);
     } else if (isValidChain(newBlocks) && ( (newBlocks.length == 1) && (newBlocks.length == A.blockChain.length) )) {
-        console.log('La blockchain reçue est valide.');
-        console.log('Remplacer la blockchain actuelle par la blockchain reçue.');
+        console.log('dans',here,'La blockchain reçue est valide.');
+        console.log('dans',here,'Remplacer la blockchain actuelle par la blockchain reçue.');
         A.blockChain = newBlocks;
         broadcast(responseLatestMsg(), here);
     } else {
