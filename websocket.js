@@ -38,28 +38,6 @@ var connectToPeers = (newPeers, caller) => {
     console.log('Sortie  de ',here);
 };
 
-var generateNextBlock = (blockData, caller) => {
-    var here = O.functionNameJS(ModuleName);
-    console.log('\n');
-    console.log('Entrée dans',here,'appelé par',caller,'avec blockData',blockData);
-
-    var previousBlock = B.getLatestBlock();
-    var nextIndex = previousBlock.index + 1;
-    var nextTimestamp = new Date().getTime() / 1000;
-    var nextHash = O.calculateHash(nextIndex, previousBlock.hashCourant, nextTimestamp, blockData);
-
-    var result = new Block(nextIndex,
-			   "texte",
-			   blockData,
-			   nextTimestamp,
-			   "clé publique",
-			   previousBlock.hashCourant,
-			   nextHash); 
-    console.log('Sortie  de',here,'avec result',result);
-
-    return result; 
-};
-
 var handleBlockchainResponse = (message, caller) => {
     var here = O.functionNameJS(ModuleName);
     console.log('\n');
@@ -175,7 +153,7 @@ var initHttpServer = (http_port, app, caller) => {
     
     app.post('/mineBlock', (req, res) => {
 	console.log('     dans',here,'/mineBlock avec req.body',req.body);
-        var newBlock = generateNextBlock(req.body.contenu, here);
+        var newBlock = B.generateNextBlock(req.body.contenu, here);
         B.addBlock(newBlock, here);
         B.broadcast(B.responseLatestMsg(), here);
         console.log('dans',here,'ajout et diffusion du bloc',JSON.stringify(newBlock));
@@ -285,6 +263,7 @@ var printWebSocketOn = (ws, caller) => {
     
 }
 
+module.exports.connectToPeerUrl = connectToPeerUrl;
 module.exports.connectToPeers = connectToPeers;
 module.exports.initHttpServer = initHttpServer;
 module.exports.initP2PServer = initP2PServer;

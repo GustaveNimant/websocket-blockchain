@@ -41,6 +41,28 @@ var broadcast = (message, caller) => {
     console.log('Sortie  de',here);
 }
 
+var generateNextBlock = (blockData, caller) => {
+    var here = O.functionNameJS(ModuleName);
+    console.log('\n');
+    console.log('Entrée dans',here,'appelé par',caller,'avec blockData',blockData);
+
+    var previousBlock = getLatestBlock();
+    var nextIndex = previousBlock.index + 1;
+    var nextTimestamp = new Date().getTime() / 1000;
+    var nextHash = O.calculateHash(nextIndex, previousBlock.hashCourant, nextTimestamp, blockData);
+
+    var result = new Block(nextIndex,
+			   "texte",
+			   blockData,
+			   nextTimestamp,
+			   "clé publique",
+			   previousBlock.hashCourant,
+			   nextHash); 
+    console.log('Sortie  de',here,'avec result',result);
+
+    return result; 
+};
+
 var getGenesisBlock = () => {
     var here = O.functionNameJS(ModuleName);
     console.log('\n');
@@ -196,6 +218,7 @@ var write = (ws, message, caller) => {
 
 module.exports.addBlock = addBlock;
 module.exports.broadcast = broadcast;
+module.exports.generateNextBlock = generateNextBlock;
 module.exports.getGenesisBlock = getGenesisBlock;
 module.exports.getLatestBlock = getLatestBlock;
 module.exports.replaceChain = replaceChain;
