@@ -28,12 +28,15 @@ var addBlock = (newBlock, caller) => {
 var broadcast = (message, caller) => {
     var here = O.functionNameJS(ModuleName);
     console.log('\n');
-    console.log('Entrée dans',here,'appelé par',caller,'avec message',message)
+    console.log('Entrée dans',here,'appelé par',caller);
+    console.log('\n');
+    console.log('Entrée dans',here,'avec message',message)
+    console.log('\n');
     console.log('dans',here,'il y a',A.socket_a.length,'sockets');
 
-    A.socket_a.forEach (soc => {
-	console.log('dans',here,'écriture du message dans le socket');
-	write(soc, message, here)
+    A.socket_a.forEach (ws => {
+	console.log('dans',here,'écriture du message dans le socket',ws.url);
+	write(ws, message, here)
     });
     console.log('Sortie  de',here);
 }
@@ -184,6 +187,7 @@ var write = (ws, message, caller) => {
     console.log('Entrée dans',here,'avec message',message);
     
     ws.send(JSON.stringify(message))
+    
     console.log('Sortie  de',here);
 };
 

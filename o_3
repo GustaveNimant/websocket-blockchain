@@ -8,7 +8,7 @@
 [32m[nodemon] starting `node main.js`[39m
 
 
-Date: 2019-11-14T12:36:02.418Z
+Date: 2019-11-14T12:58:48.388Z
 dans main InitialPeers [ 'ws://localhost:6001', 'ws://localhost:6002' ]
 
 
@@ -19,7 +19,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.422,
+  horodatage: 1573736328.393,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -79,7 +79,7 @@ dans websocket.js:initMessageHandler blockChain [ Block {
     index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-    horodatage: 1573734962.422,
+    horodatage: 1573736328.393,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -128,7 +128,7 @@ dans websocket.js:initMessageHandler blockChain [ Block {
     index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-    horodatage: 1573734962.422,
+    horodatage: 1573736328.393,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -163,23 +163,23 @@ dans websocket.js:initMessageHandler message.type 0
 Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 dans websocket.js:initMessageHandler write dans ws://localhost:6001 de responseLatestMsg { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 Entrée dans blockchain.js:write appelé par websocket.js:initMessageHandler
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 Sortie  de blockchain.js:write
 dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":0}
 dans websocket.js:initMessageHandler message.type 0
@@ -190,25 +190,25 @@ dans websocket.js:initMessageHandler message.type 0
 Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 dans websocket.js:initMessageHandler write dans ws://localhost:6002 de responseLatestMsg { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 Entrée dans blockchain.js:write appelé par websocket.js:initMessageHandler
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6002
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573734962.422,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736328.393,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 Sortie  de blockchain.js:write
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3001 p2p 6001\",\"horodatage\":1573734938.869,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3001 p2p 6001\",\"horodatage\":1573736321.793,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -218,13 +218,13 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -235,7 +235,7 @@ dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.422,
+  horodatage: 1573736328.393,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -247,14 +247,14 @@ dans websocket.js:handleBlockchainResponse Index du block    reçu: 0
 
 
 dans websocket.js:handleBlockchainResponse La blockchain a reçu un Bloc Genesis (index = 0)
-dans websocket.js:handleBlockchainResponse l'horodatage du Bloc reçu ( 1573734938.869 ) < à celui Bloc courant ( 1573734962.422 ) le remplacer
+dans websocket.js:handleBlockchainResponse l'horodatage du Bloc reçu ( 1573736321.793 ) < à celui Bloc courant ( 1573736328.393 ) le remplacer
 
 
 Entrée dans blockchain.js:replaceChain appelé par websocket.js:handleBlockchainResponse
 Entrée dans blockchain.js:replaceChain avec newBlocks [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -264,7 +264,7 @@ Entrée dans blockchain.js:replaceChain avec newBlocks [ { index: 0,
 Entrée dans blockchain.js:isValidChain avec blockchainToValidate [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -278,7 +278,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.45,
+  horodatage: 1573736328.42,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -288,7 +288,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
 dans blockchain.js:isValidChain genesisBlockToValidate { index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573734938.869,
+  horodatage: 1573736321.793,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -297,15 +297,15 @@ dans blockchain.js:isValidChain tandis que genesisBlockCurrent Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.45,
+  horodatage: 1573736328.42,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
 
 
-dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573734938.869
-dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573734962.45
+dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573736321.793
+dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573736328.42
 Sortie  de blockchain.js:isValidChain avec result true
 dans blockchain.js:replaceChain areValidNewBlocks true
 dans blockchain.js:replaceChain newBlocks.length 1
@@ -315,7 +315,7 @@ dans blockchain.js:replaceChain blockChain.length 1
 Entrée dans blockchain.js:isValidChain avec blockchainToValidate [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -329,7 +329,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.45,
+  horodatage: 1573736328.421,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -339,7 +339,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
 dans blockchain.js:isValidChain genesisBlockToValidate { index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573734938.869,
+  horodatage: 1573736321.793,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -348,22 +348,22 @@ dans blockchain.js:isValidChain tandis que genesisBlockCurrent Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.45,
+  horodatage: 1573736328.421,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
 
 
-dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573734938.869
-dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573734962.45
+dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573736321.793
+dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573736328.421
 Sortie  de blockchain.js:isValidChain avec result true
 
 
 Entrée dans blockchain.js:isValidChain avec blockchainToValidate [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -377,7 +377,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.451,
+  horodatage: 1573736328.421,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -387,7 +387,7 @@ Sortie  de blockchain.js:getGenesisBlock avec result Block {
 dans blockchain.js:isValidChain genesisBlockToValidate { index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573734938.869,
+  horodatage: 1573736321.793,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -396,15 +396,15 @@ dans blockchain.js:isValidChain tandis que genesisBlockCurrent Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
-  horodatage: 1573734962.451,
+  horodatage: 1573736328.421,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
 
 
-dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573734938.869
-dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573734962.451
+dans blockchain.js:isValidChain genesisBlockToValidate.horodatage 1573736321.793
+dans blockchain.js:isValidChain    genesisBlockCurrent.horodatage 1573736328.421
 Sortie  de blockchain.js:isValidChain avec result true
 dans blockchain.js:replaceChain La blockchain reçue est valide.
 dans blockchain.js:replaceChain Remplacer la blockchain actuelle par la blockchain reçue.
@@ -413,30 +413,35 @@ dans blockchain.js:replaceChain Remplacer la blockchain actuelle par la blockcha
 Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
-Entrée dans blockchain.js:broadcast appelé par blockchain.js:replaceChain avec message { type: 2,
+Entrée dans blockchain.js:broadcast appelé par blockchain.js:replaceChain
+
+
+Entrée dans blockchain.js:broadcast avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+
+
 dans blockchain.js:broadcast il y a 2 sockets
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6001
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 Sortie  de blockchain.js:write
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6002
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6002
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 Sortie  de blockchain.js:write
 Sortie  de blockchain.js:broadcast
 Sortie  de blockchain.js:replaceChain
@@ -446,7 +451,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -457,7 +462,7 @@ Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 0 fin de handleBlockchainResponse =====
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3001 p2p 6001\",\"horodatage\":1573734938.869,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3001 p2p 6001\",\"horodatage\":1573736321.793,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -467,13 +472,13 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573734938.869,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736321.793,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -483,7 +488,7 @@ dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 0,
 dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: { index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573734938.869,
+  horodatage: 1573736321.793,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -501,7 +506,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -512,7 +517,7 @@ Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 0 fin de handleBlockchainResponse =====
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"typeContenu\":\"texte\",\"contenu\":\"Données du premier block de websocket-blockchain\",\"horodatage\":1573734979.544,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\",\"hashCourant\":\"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"typeContenu\":\"texte\",\"contenu\":\"Données du premier block de websocket-blockchain\",\"horodatage\":1573736331.276,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\",\"hashCourant\":\"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -522,24 +527,24 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' } ]
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' } ]
 
 
 dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: { index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573734938.869,
+  horodatage: 1573736321.793,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
@@ -558,30 +563,35 @@ dans websocket.js:handleBlockchainResponse Les Hashes correspondent. Nous pouvon
 Entrée dans blockchain.js:responseLatestMsg avec 2 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
 
 
-Entrée dans blockchain.js:broadcast appelé par websocket.js:handleBlockchainResponse avec message { type: 2,
+Entrée dans blockchain.js:broadcast appelé par websocket.js:handleBlockchainResponse
+
+
+Entrée dans blockchain.js:broadcast avec message { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
+
+
 dans blockchain.js:broadcast il y a 2 sockets
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6001
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
 Sortie  de blockchain.js:write
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6002
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6002
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
 Sortie  de blockchain.js:write
 Sortie  de blockchain.js:broadcast
 
@@ -590,7 +600,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -598,19 +608,19 @@ Blockchain:
   { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' } ]
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' } ]
 
 
 Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 1 fin de handleBlockchainResponse =====
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"typeContenu\":\"texte\",\"contenu\":\"Données du premier block de websocket-blockchain\",\"horodatage\":1573734979.544,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\",\"hashCourant\":\"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":1,\"typeContenu\":\"texte\",\"contenu\":\"Données du premier block de websocket-blockchain\",\"horodatage\":1573736331.276,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\",\"hashCourant\":\"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -620,29 +630,29 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573734979.544,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286"}]' }
+   '[{"index":1,"typeContenu":"texte","contenu":"Données du premier block de websocket-blockchain","horodatage":1573736331.276,"auteurClePublique":"clé publique","hashPrecedent":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18","hashCourant":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' } ]
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' } ]
 
 
 dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: { index: 1,
   typeContenu: 'texte',
   contenu: 'Données du premier block de websocket-blockchain',
-  horodatage: 1573734979.544,
+  horodatage: 1573736331.276,
   auteurClePublique: 'clé publique',
   hashPrecedent:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
   hashCourant:
-   '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' }
+   '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' }
 
 
 dans websocket.js:handleBlockchainResponse Index du dernier block: 1
@@ -656,7 +666,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -664,19 +674,19 @@ Blockchain:
   { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' } ]
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' } ]
 
 
 Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 1 fin de handleBlockchainResponse =====
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"typeContenu\":\"texte\",\"contenu\":\"Donnees du deuxième block de websocket-blockchain\",\"horodatage\":1573734983.093,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286\",\"hashCourant\":\"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"typeContenu\":\"texte\",\"contenu\":\"Donnees du deuxième block de websocket-blockchain\",\"horodatage\":1573736332.798,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633\",\"hashCourant\":\"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -686,29 +696,29 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 2,
     typeContenu: 'texte',
     contenu: 'Donnees du deuxième block de websocket-blockchain',
-    horodatage: 1573734983.093,
+    horodatage: 1573736332.798,
     auteurClePublique: 'clé publique',
     hashPrecedent:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286',
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633',
     hashCourant:
-     '433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2' } ]
+     'cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532' } ]
 
 
 dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: { index: 1,
   typeContenu: 'texte',
   contenu: 'Données du premier block de websocket-blockchain',
-  horodatage: 1573734979.544,
+  horodatage: 1573736331.276,
   auteurClePublique: 'clé publique',
   hashPrecedent:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
   hashCourant:
-   '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' }
+   '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' }
 
 
 dans websocket.js:handleBlockchainResponse Index du dernier block: 1
@@ -723,30 +733,35 @@ dans websocket.js:handleBlockchainResponse Les Hashes correspondent. Nous pouvon
 Entrée dans blockchain.js:responseLatestMsg avec 3 blocs
 Sortie  de blockchain.js:responseLatestMsg result { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
 
 
-Entrée dans blockchain.js:broadcast appelé par websocket.js:handleBlockchainResponse avec message { type: 2,
+Entrée dans blockchain.js:broadcast appelé par websocket.js:handleBlockchainResponse
+
+
+Entrée dans blockchain.js:broadcast avec message { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
+
+
 dans blockchain.js:broadcast il y a 2 sockets
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6001
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
 Sortie  de blockchain.js:write
-dans blockchain.js:broadcast écriture du message dans le socket
+dans blockchain.js:broadcast écriture du message dans le socket ws://localhost:6002
 
 
 Entrée dans blockchain.js:write appelé par blockchain.js:broadcast
 Entrée dans blockchain.js:write avec ws.url ws://localhost:6002
 Entrée dans blockchain.js:write avec message { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
 Sortie  de blockchain.js:write
 Sortie  de blockchain.js:broadcast
 
@@ -755,7 +770,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -763,28 +778,28 @@ Blockchain:
   { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' },
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' },
   { index: 2,
     typeContenu: 'texte',
     contenu: 'Donnees du deuxième block de websocket-blockchain',
-    horodatage: 1573734983.093,
+    horodatage: 1573736332.798,
     auteurClePublique: 'clé publique',
     hashPrecedent:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286',
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633',
     hashCourant:
-     '433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2' } ]
+     'cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532' } ]
 
 
 Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 2 fin de handleBlockchainResponse =====
-dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"typeContenu\":\"texte\",\"contenu\":\"Donnees du deuxième block de websocket-blockchain\",\"horodatage\":1573734983.093,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286\",\"hashCourant\":\"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2\"}]"}
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":2,\"typeContenu\":\"texte\",\"contenu\":\"Donnees du deuxième block de websocket-blockchain\",\"horodatage\":1573736332.798,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633\",\"hashCourant\":\"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532\"}]"}
 dans websocket.js:initMessageHandler message.type 2
 
 
@@ -794,29 +809,29 @@ dans websocket.js:initMessageHandler appel de handleBlockchainResponse
 Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
 Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
   data:
-   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573734983.093,"auteurClePublique":"clé publique","hashPrecedent":"81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286","hashCourant":"433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2"}]' }
+   '[{"index":2,"typeContenu":"texte","contenu":"Donnees du deuxième block de websocket-blockchain","horodatage":1573736332.798,"auteurClePublique":"clé publique","hashPrecedent":"713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633","hashCourant":"cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532"}]' }
 
 
 dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 2,
     typeContenu: 'texte',
     contenu: 'Donnees du deuxième block de websocket-blockchain',
-    horodatage: 1573734983.093,
+    horodatage: 1573736332.798,
     auteurClePublique: 'clé publique',
     hashPrecedent:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286',
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633',
     hashCourant:
-     '433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2' } ]
+     'cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532' } ]
 
 
 dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: { index: 2,
   typeContenu: 'texte',
   contenu: 'Donnees du deuxième block de websocket-blockchain',
-  horodatage: 1573734983.093,
+  horodatage: 1573736332.798,
   auteurClePublique: 'clé publique',
   hashPrecedent:
-   '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286',
+   '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633',
   hashCourant:
-   '433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2' }
+   'cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532' }
 
 
 dans websocket.js:handleBlockchainResponse Index du dernier block: 2
@@ -830,7 +845,7 @@ Blockchain:
 [ { index: 0,
     typeContenu: 'texte',
     contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-    horodatage: 1573734938.869,
+    horodatage: 1573736321.793,
     auteurClePublique: 'clé publique',
     hashPrecedent: 'hash vide',
     hashCourant:
@@ -838,24 +853,267 @@ Blockchain:
   { index: 1,
     typeContenu: 'texte',
     contenu: 'Données du premier block de websocket-blockchain',
-    horodatage: 1573734979.544,
+    horodatage: 1573736331.276,
     auteurClePublique: 'clé publique',
     hashPrecedent:
      '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18',
     hashCourant:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286' },
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633' },
   { index: 2,
     typeContenu: 'texte',
     contenu: 'Donnees du deuxième block de websocket-blockchain',
-    horodatage: 1573734983.093,
+    horodatage: 1573736332.798,
     auteurClePublique: 'clé publique',
     hashPrecedent:
-     '81037883bcb49c85374950653982732fdcd40adea2ab5a3dac579ecd49b13286',
+     '713617325a89ab9872894210d7dbd61c19f3dd4a88430e5a691e87d55c42a633',
     hashCourant:
-     '433ff9a10f4e5e3ab41b29a2c685c33b0828dbfe4849036803c05c85d72aa7f2' } ]
+     'cc0569956198ca2a30feb0aac8607679ca6e109de3af9278acbac36115d9d532' } ]
 
 
 Sortie  de websocket.js:handleBlockchainResponse
 
 
 ===== Bloc # 2 fin de handleBlockchainResponse =====
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node main.js`[39m
+
+
+Date: 2019-11-14T13:01:40.713Z
+dans main InitialPeers [ 'ws://localhost:6001', 'ws://localhost:6002' ]
+
+
+
+Entrée dans block.js:Block constructor avec index 0 
+
+Sortie  de blockchain.js:getGenesisBlock avec result Block {
+  index: 0,
+  typeContenu: 'texte',
+  contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+  horodatage: 1573736500.718,
+  auteurClePublique: 'clé publique',
+  hashPrecedent: 'hash vide',
+  hashCourant:
+   '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
+
+
+Entrée dans websocket.js:connectToPeers appelé par main avec 2 newPeers
+dans websocket.js:connectToPeers boucle sur peerUrl ws://localhost:6001
+Entrée dans websocket.js:connectToPeerUrl appelé par websocket.js:connectToPeers avec peerUrl ws://localhost:6001
+Dans websocket.js:connectToPeerUrl création de ws.url ws://localhost:6001
+Dans websocket.js:connectToPeerUrl ws.readyState 0
+Sortie  de  websocket.js:connectToPeerUrl
+dans websocket.js:connectToPeers boucle sur peerUrl ws://localhost:6002
+Entrée dans websocket.js:connectToPeerUrl appelé par websocket.js:connectToPeers avec peerUrl ws://localhost:6002
+Dans websocket.js:connectToPeerUrl création de ws.url ws://localhost:6002
+Dans websocket.js:connectToPeerUrl ws.readyState 0
+Sortie  de  websocket.js:connectToPeerUrl
+Sortie  de  websocket.js:connectToPeers
+
+
+===== Entrée dans websocket.js:initHttpServer appelé par main =====
+      Sortie  de websocket.js:initHttpServer
+
+
+===== Entrée dans websocket.js:initP2PServer appelé par main =====
+===== Entrée dans websocket.js:initP2PServer avec p2p_port 6003 =====
+
+
+============ dans websocket.js:initP2PServer création du WebSocket.Server en Écoute du port P2P sur 6003 =====
+      Sortie  de  websocket.js:initP2PServer
+
+===== Fin de main =====
+
+
+
+===== dans websocket.js:initHttpServer Écoute sur le port HTTP 3003 =====
+Dans websocket.js:connectToPeerUrl échec de la connexion à ws ws://localhost:6002
+
+
+===== Entrée dans websocket.js:initConnection appelé par websocket.js:connectToPeerUrl =====
+
+
+===== Entrée dans websocket.js:initConnection nouvelle connexion à ws://localhost:6001 =====
+
+
+dans websocket.js:initConnection ws pour ws.url ws://localhost:6001 ajouté à A.socket_a
+dans websocket.js:initConnection socket_a a 1 sockets
+
+
+===== Entrée dans websocket.js:initMessageHandler appelé par websocket.js:initConnection =====
+===== Entrée dans websocket.js:initMessageHandler avec ws.url ws://localhost:6001 =====
+
+
+dans websocket.js:initMessageHandler il y a 1 sockets
+
+
+dans websocket.js:initMessageHandler blockChain [ Block {
+    index: 0,
+    typeContenu: 'texte',
+    contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+    horodatage: 1573736500.718,
+    auteurClePublique: 'clé publique',
+    hashPrecedent: 'hash vide',
+    hashCourant:
+     '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' } ]
+
+
+      Sortie de websocket.js:initMessageHandler
+
+
+
+
+Entrée dans websocket.js:initErrorHandler appelé par websocket.js:initConnection
+Sortie de  websocket.js:initErrorHandler
+
+
+dans websocket.js:initConnection écriture de queryChainLengthMsg { type: 0 } dans ws.url ws://localhost:6001
+
+
+Entrée dans blockchain.js:write appelé par websocket.js:initConnection
+Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
+Entrée dans blockchain.js:write avec message { type: 0 }
+Sortie  de blockchain.js:write
+      Sortie  de websocket.js:initConnection
+
+
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":0}
+dans websocket.js:initMessageHandler message.type 0
+
+
+
+
+Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
+Sortie  de blockchain.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736500.718,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+dans websocket.js:initMessageHandler write dans ws://localhost:6001 de responseLatestMsg { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736500.718,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+
+
+Entrée dans blockchain.js:responseLatestMsg avec 1 blocs
+Sortie  de blockchain.js:responseLatestMsg result { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736500.718,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+
+
+Entrée dans blockchain.js:write appelé par websocket.js:initMessageHandler
+Entrée dans blockchain.js:write avec ws.url ws://localhost:6001
+Entrée dans blockchain.js:write avec message { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736500.718,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+Sortie  de blockchain.js:write
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3001 p2p 6001\",\"horodatage\":1573736500.719,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
+dans websocket.js:initMessageHandler message.type 2
+
+
+dans websocket.js:initMessageHandler appel de handleBlockchainResponse
+
+
+Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
+Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3001 p2p 6001","horodatage":1573736500.719,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+
+
+dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 0,
+    typeContenu: 'texte',
+    contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
+    horodatage: 1573736500.719,
+    auteurClePublique: 'clé publique',
+    hashPrecedent: 'hash vide',
+    hashCourant:
+     '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' } ]
+
+
+dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: Block {
+  index: 0,
+  typeContenu: 'texte',
+  contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+  horodatage: 1573736500.718,
+  auteurClePublique: 'clé publique',
+  hashPrecedent: 'hash vide',
+  hashCourant:
+   '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
+
+
+dans websocket.js:handleBlockchainResponse Index du dernier block: 0
+dans websocket.js:handleBlockchainResponse Index du block    reçu: 0
+
+
+dans websocket.js:handleBlockchainResponse La blockchain a reçu un Bloc Genesis (index = 0)
+
+
+Blockchain:
+[ Block {
+    index: 0,
+    typeContenu: 'texte',
+    contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+    horodatage: 1573736500.718,
+    auteurClePublique: 'clé publique',
+    hashPrecedent: 'hash vide',
+    hashCourant:
+     '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' } ]
+
+
+Sortie  de websocket.js:handleBlockchainResponse
+
+
+===== Bloc # 0 fin de handleBlockchainResponse =====
+dans websocket.js:initMessageHandler ws.on Message Reçu data {"type":2,"data":"[{\"index\":0,\"typeContenu\":\"texte\",\"contenu\":\"Bloc Genesis de websocket-blockchain http 3003 p2p 6003\",\"horodatage\":1573736500.718,\"auteurClePublique\":\"clé publique\",\"hashPrecedent\":\"hash vide\",\"hashCourant\":\"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18\"}]"}
+dans websocket.js:initMessageHandler message.type 2
+
+
+dans websocket.js:initMessageHandler appel de handleBlockchainResponse
+
+
+Entrée dans websocket.js:handleBlockchainResponse appelé par websocket.js:initMessageHandler
+Entrée dans websocket.js:handleBlockchainResponse avec message { type: 2,
+  data:
+   '[{"index":0,"typeContenu":"texte","contenu":"Bloc Genesis de websocket-blockchain http 3003 p2p 6003","horodatage":1573736500.718,"auteurClePublique":"clé publique","hashPrecedent":"hash vide","hashCourant":"0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18"}]' }
+
+
+dans websocket.js:handleBlockchainResponse Tous les Blocs reçus: [ { index: 0,
+    typeContenu: 'texte',
+    contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+    horodatage: 1573736500.718,
+    auteurClePublique: 'clé publique',
+    hashPrecedent: 'hash vide',
+    hashCourant:
+     '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' } ]
+
+
+dans websocket.js:handleBlockchainResponse Dernier  Bloc stocké: Block {
+  index: 0,
+  typeContenu: 'texte',
+  contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+  horodatage: 1573736500.718,
+  auteurClePublique: 'clé publique',
+  hashPrecedent: 'hash vide',
+  hashCourant:
+   '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
+
+
+dans websocket.js:handleBlockchainResponse Index du dernier block: 0
+dans websocket.js:handleBlockchainResponse Index du block    reçu: 0
+
+
+dans websocket.js:handleBlockchainResponse La blockchain a reçu un Bloc Genesis (index = 0)
+
+
+Blockchain:
+[ Block {
+    index: 0,
+    typeContenu: 'texte',
+    contenu: 'Bloc Genesis de websocket-blockchain http 3003 p2p 6003',
+    horodatage: 1573736500.718,
+    auteurClePublique: 'clé publique',
+    hashPrecedent: 'hash vide',
+    hashCourant:
+     '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' } ]
+
+
+Sortie  de websocket.js:handleBlockchainResponse
+
+
+===== Bloc # 0 fin de handleBlockchainResponse =====
