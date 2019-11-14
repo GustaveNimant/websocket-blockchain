@@ -4,12 +4,27 @@ var WebSocket = require("ws");
 var bodyParser = require('body-parser');
 
 var A = require("./arrays");
-var O = require("./outils");
 var B = require ('./blockchain.js');
+var O = require("./outils");
 
 const {Block} = require ('./block.js');
 
 var ModuleName = 'websocket.js';
+
+var connectToPeerUrl = (peerUrl, caller) => {
+    var here = O.functionNameJS(ModuleName); 
+    console.log('Entrée dans',here,'appelé par',caller,'avec peerUrl',peerUrl);
+
+    var ws = new WebSocket(peerUrl);
+    
+    console.log('Dans',here,'création de ws.url',ws.url)
+    console.log('Dans',here,'ws.readyState',ws.readyState)
+    ws.on('open', () => initConnection(ws, here));
+    ws.on('error', () => {
+        console.log('Dans',here,'échec de la connexion à ws',ws.url)
+    });
+    console.log('Sortie  de ',here);
+};
 
 var connectToPeers = (newPeers, caller) => {
     var here = O.functionNameJS(ModuleName);
@@ -18,14 +33,7 @@ var connectToPeers = (newPeers, caller) => {
 
     newPeers.forEach((peerUrl) => {
 	console.log('dans',here,'boucle sur peerUrl',peerUrl);
-        var ws = new WebSocket(peerUrl);
-	
-	console.log('dans',here,'création de ws.url',ws.url)
-	console.log('dans',here,'ws.readyState',ws.readyState)
-        ws.on('open', () => initConnection(ws, here));
-        ws.on('error', () => {
-            console.log('dans',here,'échec de la connexion à ws',ws.url)
-        });
+        connectToPeerUrl(peerUrl, here);
     });
     console.log('Sortie  de ',here);
 };
@@ -113,7 +121,7 @@ var initConnection = (ws, caller) => {
     console.log('\n');
     console.log('===== Entrée dans',here,'appelé par',caller,'=====');
     console.log('\n');
-      console.log('===== Entrée dans',here,'nouvelle connexion à',ws.url,'=====');
+    console.log('===== Entrée dans',here,'nouvelle connexion à',ws.url,'=====');
 
     if (ws.url == undefined ) {
 	console.log('\n');
