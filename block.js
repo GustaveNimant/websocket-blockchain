@@ -19,7 +19,21 @@ class Block {
     }
 }
 
+var createBlocController = (bloc) => {
+    var here = O.functionNameJS(ModuleName);
+    var result = new Block(bloc.index,
+			   bloc.typeContenu,
+			   bloc.contenu,
+			   bloc.horodatage,
+			   bloc.auteurClePublique,
+			   bloc.hashPrecedent,
+			   bloc.hashCourant);
+    
+    console.log('Sortie  de',here,'avec result',result);
+    return result;
+};
+
 module.exports = {
     Block
 };
-
+module.exports.createBlocController = createBlocController;

@@ -1,6 +1,6 @@
 'use strict';
 
-const {Block} = require ('./block.js');
+const {Block, createBlocController} = require ('./block.js');
 
 var A = require("./arrays");
 var O = require("./outils");
@@ -49,13 +49,16 @@ var getGenesisBlock = () => {
     var http_port = process.env.HTTP_PORT;
     var p2p_port = process.env.P2P_PORT;
     var contenu = "Bloc Genesis de websocket-blockchain http " + http_port + " p2p " + p2p_port;
-    var result = new Block(0,
-		     "texte",
-		     contenu,
-		     nextTimestamp,
-		     "clé publique",
-		     "hash vide",
-		       nextHash);
+
+    var result = createBlocController ({
+	index: 0,
+	typeContenu: "texte",
+	contenu: contenu,
+	horodatage: nextTimestamp,
+	auteurClePublique: "clé publique",
+	hashPrecedent:"hash vide",
+	hashCourant: nextHash
+    });
     
     console.log('Sortie  de',here,'avec result',result);
     return result;
