@@ -3,9 +3,9 @@
 var WebSocket = require("ws");
 var bodyParser = require('body-parser');
 
-var A = require("./arrays");
-var B = require ('./blockchain.js');
-var O = require("./outils");
+var A = require('./arrays');
+var B = require('./blockchain.js');
+var O = require('./outils');
 
 const {Block} = require ('./block.js');
 
@@ -43,6 +43,7 @@ var handleBlockchainResponse = (message, caller) => {
     console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller);
     console.log('Entrée dans',here,'avec message',message);
+    console.log('Entrée dans',here,'avec blockChain',A.blockChain);
     
     /* tri sur les indices */
     var receivedBlocks = JSON.parse(message.data).sort((b1, b2) => (b1.index - b2.index));
@@ -153,22 +154,27 @@ var initHttpServer = (http_port, app, caller) => {
     app.use(bodyParser.json());
 
     app.get('/blocks', (req, res) => {
-	console.log('     dans',here,'/blocks avec req.body',req.body);
-	    res.send(JSON.stringify(A.blockChain));
-	   });
+	console.log('\n');
+	console.log('dans',here,'/blocks avec req.body',req.body);
+	res.send(JSON.stringify(A.blockChain));
+    });
     
     app.post('/mineBlock', (req, res) => {
-	console.log('     dans',here,'/mineBlock avec req.body',req.body);
+	console.log('\n');
+	console.log('dans',here,'/mineBlock avec req.body',req.body);
         var newBlock = B.generateNextBlock(req.body.contenu, here);
         B.addBlock(newBlock, here);
         B.broadcast(B.responseLatestMsg(here), here);
         console.log('dans',here,'après broadcast ajout et diffusion du bloc',JSON.stringify(newBlock));
         res.send();
     });
+    
     app.get('/peers', (req, res) => {
+	console.log('\n');
 	console.log('dans',here,'/peers req.body',req.body);
         res.send(A.socket_a.map(s => s._socket.remoteAddress + ':' + s._socket.remotePort));
     });
+    
     app.post('/addPeer', (req, res) => {
 	console.log('\n');
 	console.log('dans',here,'/addPeer req.body',req.body);
@@ -215,7 +221,7 @@ var initMessageHandler = (ws, caller) => {
             break;
         case B.MessageType.QUERY_ALL:
 	    console.log('dans',here,'write dans',ws.url,'de responseChainMsg', responseChainMsg(here));
-            B.write(ws, B.responseChainMsg(here), here);
+            B.write(ws, responseChainMsg(here), here);
             break;
         case B.MessageType.RESPONSE_BLOCKCHAIN:
 	    console.log('dans',here,'appel de handleBlockchainResponse');

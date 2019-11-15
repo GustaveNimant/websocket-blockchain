@@ -81,7 +81,7 @@ var getGenesisBlock = (caller) => {
 	horodatage: nextTimestamp,
 	auteurClePublique: "clé publique",
 	hashPrecedent:"hash vide",
-	hashCourant: nextHash
+	hashCourant: nextHash,
     });
     
     console.log('Sortie  de',here,'avec result',result);
