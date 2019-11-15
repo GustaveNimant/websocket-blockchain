@@ -47,6 +47,12 @@ var handleBlockchainResponse = (message, caller) => {
     /* tri sur les indices */
     var receivedBlocks = JSON.parse(message.data).sort((b1, b2) => (b1.index - b2.index));
     var latestBlockReceived = receivedBlocks[receivedBlocks.length - 1];
+
+    if (A.blockChain.length == 0) {
+	A.blockChain = [B.getGenesisBlock(here)];
+    }
+    console.log('dans',here,'blockChain',A.blockChain);
+    
     var latestBlockHeld = A.blockChain[A.blockChain.length - 1];
 
     console.log('\n');
@@ -66,10 +72,10 @@ var handleBlockchainResponse = (message, caller) => {
         if (latestBlockHeld.hashCourant === latestBlockReceived.hashPrecedent) {
             console.log('dans',here,'Les Hashes correspondent. Nous pouvons appondre le bloc reçu à notre chaîne et le diffuser');
             A.blockChain.push (latestBlockReceived);
-            B.broadcast (B.responseLatestMsg(), here);
+            B.broadcast (B.responseLatestMsg(here), here);
         } else if (receivedBlocks.length === 1) {
             console.log('dans',here,'Le block reçu a une longueur de 1. Nous devons interroger notre chaîne depuis notre pair');
-            B.broadcast(queryAllMsg(), here);
+            B.broadcast(queryAllMsg(here), here);
         } else {
             console.log('dans',here,'La blockchain reçue est plus longue (',receivedBlocks.length,') que la blockchain actuelle (',latestBlockHeld.index,') la remplacer');
             B.replaceChain(receivedBlocks, here);
@@ -117,9 +123,9 @@ var initConnection = (ws, caller) => {
     initErrorHandler(ws, here);
     console.log('\n');
     
-    console.log('dans',here,'écriture de queryChainLengthMsg',queryChainLengthMsg(),'dans ws.url',ws.url);
+    console.log('dans',here,'écriture de queryChainLengthMsg',queryChainLengthMsg(here),'dans ws.url',ws.url);
     
-    B.write(ws, queryChainLengthMsg(), here);
+    B.write(ws, queryChainLengthMsg(here), here);
     
     console.log('      Sortie  de',here);
     console.log('\n');
@@ -155,8 +161,8 @@ var initHttpServer = (http_port, app, caller) => {
 	console.log('     dans',here,'/mineBlock avec req.body',req.body);
         var newBlock = B.generateNextBlock(req.body.contenu, here);
         B.addBlock(newBlock, here);
-        B.broadcast(B.responseLatestMsg(), here);
-        console.log('dans',here,'ajout et diffusion du bloc',JSON.stringify(newBlock));
+        B.broadcast(B.responseLatestMsg(here), here);
+        console.log('dans',here,'après broadcast ajout et diffusion du bloc',JSON.stringify(newBlock));
         res.send();
     });
     app.get('/peers', (req, res) => {
@@ -197,18 +203,19 @@ var initMessageHandler = (ws, caller) => {
     ws.on('message', (data) => {
         var message = JSON.parse(data);
 
+	console.log('\n');
         console.log('dans',here,'ws.on Message Reçu data',data);
 	console.log('dans',here,'message.type',message.type);
 	console.log('\n');
 	
         switch (message.type) {
         case B.MessageType.QUERY_LATEST:
-	    console.log('dans',here,'write dans',ws.url,'de responseLatestMsg', B.responseLatestMsg());
-            B.write(ws, B.responseLatestMsg(), here);
+	    console.log('dans',here,'write dans',ws.url,'de responseLatestMsg', B.responseLatestMsg(here));
+            B.write(ws, B.responseLatestMsg(here), here);
             break;
         case B.MessageType.QUERY_ALL:
-	    console.log('dans',here,'write dans',ws.url,'de responseChainMsg', B.responseChainMsg());
-            B.write(ws, B.responseChainMsg(), here);
+	    console.log('dans',here,'write dans',ws.url,'de responseChainMsg', responseChainMsg(here));
+            B.write(ws, B.responseChainMsg(here), here);
             break;
         case B.MessageType.RESPONSE_BLOCKCHAIN:
 	    console.log('dans',here,'appel de handleBlockchainResponse');
@@ -234,14 +241,28 @@ var initP2PServer = (p2p_port, caller) => {
     console.log('      Sortie  de ',here);
 };
 
-var queryChainLengthMsg = () => ({'type': B.MessageType.QUERY_LATEST});
-
-var queryAllMsg = () => ({'type': B.MessageType.QUERY_ALL});
-
-var responseChainMsg = () => {
+var queryChainLengthMsg = (caller) => {
     var here = O.functionNameJS (ModuleName);
     console.log('\n');
-    console.log('Entrée dans',here,'avec',A.blockChain.length,'blocs');
+    console.log('Entrée dans',here,'appelé par',caller);
+    
+    var result = ({'type': B.MessageType.QUERY_LATEST});
+    return result;
+};
+
+var queryAllMsg = (caller) => {
+    var here = O.functionNameJS (ModuleName);
+    console.log('\n');
+    console.log('Entrée dans',here,'appelé par',caller);
+    
+    var result = ({'type': B.MessageType.QUERY_ALL});
+    return result;
+};
+
+var responseChainMsg = (caller) => {
+    var here = O.functionNameJS (ModuleName);
+    console.log('\n');
+    console.log('Entrée dans',here,'appelé par',caller,'avec',A.blockChain.length,'blocs');
     
     var result = {
 	'type': B.MessageType.RESPONSE_BLOCKCHAIN,

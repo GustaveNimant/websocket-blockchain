@@ -10,6 +10,7 @@ last=1
 if [ $# -ne $last ] 
 then
     echo -e "Usage :\n$script <httpPort>\n"
+    echo -e "Exemple :\n$script 3001\n"
     exit 1
 fi
 

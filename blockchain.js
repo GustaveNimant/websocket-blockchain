@@ -63,9 +63,11 @@ var generateNextBlock = (blockData, caller) => {
     return result; 
 };
 
-var getGenesisBlock = () => {
+var getGenesisBlock = (caller) => {
     var here = O.functionNameJS(ModuleName);
     console.log('\n');
+    console.log('Entrée dans',here,'appelé par',caller);
+    
     var nextHash = O.calculateHash(0, "hash vide", nextTimestamp, "mon bloc génésis");
     var nextTimestamp = new Date().getTime() / 1000;
     var http_port = process.env.HTTP_PORT;
@@ -93,7 +95,7 @@ var isValidChain = (blockchainToValidate) => {
     console.log('\n');
     console.log('Entrée dans',here,'avec blockchainToValidate',blockchainToValidate);
     var genesisBlockToValidate = blockchainToValidate[0];
-    var genesisBlockCurrent = getGenesisBlock();
+    var genesisBlockCurrent = getGenesisBlock(here);
     
     if (JSON.stringify(genesisBlockToValidate) !== JSON.stringify(genesisBlockCurrent)) {
 	console.log('\n');
@@ -176,12 +178,12 @@ var replaceChain = (newBlocks, caller) => {
         console.log('dans',here,'La blockchain reçue est valide.');
         console.log('dans',here,'Remplacer la blockchain actuelle par la blockchain reçue.');
         A.blockChain = newBlocks;
-        broadcast(responseLatestMsg(), here);
+        broadcast(responseLatestMsg(here), here);
     } else if (isValidChain(newBlocks) && ( (newBlocks.length == 1) && (newBlocks.length == A.blockChain.length) )) {
         console.log('dans',here,'La blockchain reçue est valide.');
         console.log('dans',here,'Remplacer la blockchain actuelle par la blockchain reçue.');
         A.blockChain = newBlocks;
-        broadcast(responseLatestMsg(), here);
+        broadcast(responseLatestMsg(here), here);
     } else {
 	console.log('\n');
         console.log('!!!!! dans',here,'La blockchain reçue est invalide. !!!!!');
@@ -190,10 +192,10 @@ var replaceChain = (newBlocks, caller) => {
     console.log('Sortie  de',here);
 };
 
-var responseLatestMsg = () => {
+var responseLatestMsg = (caller) => {
     var here = O.functionNameJS (ModuleName);
     console.log('\n');
-    console.log('Entrée dans',here,'avec',A.blockChain.length,'blocs');
+    console.log('Entrée dans',here,'appelé par',caller,'avec',A.blockChain.length,'blocs');
 
     var latestE = getLatestBlock();
     var result = {

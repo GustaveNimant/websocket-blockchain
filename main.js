@@ -24,7 +24,7 @@ console.log ('dans',here,'InitialPeers',InitialPeers);
 
 const {Block} = require ('./block.js');
 
-A.blockChain = [B.getGenesisBlock()];
+A.blockChain = [B.getGenesisBlock(here)];
 
 A.socket_a = [];
 

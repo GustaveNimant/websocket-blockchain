@@ -8,60 +8,28 @@
 [32m[nodemon] starting `node main.js`[39m
 
 
-Date: 2019-11-14T13:42:47.435Z
+Date: 2019-11-15T11:27:59.737Z
 dans main InitialPeers []
 
 
+Entrée dans blockchain.js:getGenesisBlock appelé par main
 
 Entrée dans block.js:Block constructor avec index 0 
 
-Sortie  de blockchain.js:getGenesisBlock avec result Block {
+Sortie  de block.js:createBlocController avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573738967.438,
+  horodatage: 1573817279.74,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
    '0043c14bfd8480be0bdf335fb5c0eb75ea70458056908df980902687ff7fcd18' }
-
-
-Entrée dans websocket.js:connectToPeers appelé par main avec 0 newPeers
-Sortie  de  websocket.js:connectToPeers
-
-
-===== Entrée dans websocket.js:initHttpServer appelé par main =====
-      Sortie  de websocket.js:initHttpServer
-
-
-===== Entrée dans websocket.js:initP2PServer appelé par main =====
-===== Entrée dans websocket.js:initP2PServer avec p2p_port 6001 =====
-
-
-============ dans websocket.js:initP2PServer création du WebSocket.Server en Écoute du port P2P sur 6001 =====
-      Sortie  de  websocket.js:initP2PServer
-
-===== Fin de main =====
-
-
-
-===== dans websocket.js:initHttpServer Écoute sur le port HTTP 3001 =====
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `node main.js`[39m
-
-
-Date: 2019-11-14T13:43:06.917Z
-dans main InitialPeers []
-
-
-
-Entrée dans block.js:Block constructor avec index 0 
-
 Sortie  de blockchain.js:getGenesisBlock avec result Block {
   index: 0,
   typeContenu: 'texte',
   contenu: 'Bloc Genesis de websocket-blockchain http 3001 p2p 6001',
-  horodatage: 1573738986.921,
+  horodatage: 1573817279.74,
   auteurClePublique: 'clé publique',
   hashPrecedent: 'hash vide',
   hashCourant:
