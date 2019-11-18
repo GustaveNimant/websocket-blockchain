@@ -28,7 +28,7 @@ A.blockChain = [B.getGenesisBlock(here)];
 
 A.socket_a = [];
 
-WS.connectToPeers(InitialPeers, 'main');
+WS.connectToPeerUrls(InitialPeers, 'main');
 WS.initHttpServer(http_port, app, 'main');
 WS.initP2PServer(p2p_port, 'main');
 console.log('\n===== Fin de main =====\n');

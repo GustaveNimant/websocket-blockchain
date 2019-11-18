@@ -13,6 +13,26 @@ function calculateHash (index, hashPrecedent, horodatage, contenu) {
     return CryptoJS.SHA256(index + hashPrecedent + horodatage + contenu).toString();
 };
 
+function errorHandler (error) {
+    if (error.syscall !== 'listen') {
+	throw error;
+    }
+    const address = server.address();
+    const bind = typeof address === 'string' ? 'pipe ' + address : 'port: ' + port;
+    switch (error.code) {
+    case 'EACCES':
+	console.error(bind + ' exige des privilèges plus élevés.');
+	process.exit(1);
+	break;
+    case 'EADDRINUSE':
+	console.error(bind + ' est déjà utilisé.');
+	process.exit(1);
+	break;
+    default:
+	throw error;
+    }
+};
+
 function errorMessage (expected, found, cure, caller) {
     console.log ('\n\nErreur dans',caller);
     console.log ('On attendait',expected);
@@ -57,7 +77,19 @@ function isValidEmail (email) {
     var result = (re.test(String(email).toLowerCase()));
     if (D.debug) {console.log('result',result);}
     return result;
-    }
+}
+
+function normalizePort (val) {
+  const port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    return val;
+  }
+  if (port >= 0) {
+    return port;
+  }
+  return false;
+};
 
 
 module.exports.calculateHash = calculateHash;
@@ -66,5 +98,5 @@ module.exports.errorMessage = errorMessage;
 module.exports.functionNameJS = functionNameJS;
 module.exports.getLatestElement = getLatestElement;
 module.exports.isValidEmail = isValidEmail;
-
+module.exports.normalizePort = normalizePort;
 

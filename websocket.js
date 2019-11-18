@@ -26,7 +26,7 @@ var connectToPeerUrl = (peerUrl, caller) => {
     console.log('Sortie  de ',here);
 };
 
-var connectToPeers = (newPeers, caller) => {
+var connectToPeerUrls = (newPeers, caller) => {
     var here = O.functionNameJS(ModuleName);
     console.log('\n');
     console.log('Entrée dans',here,'appelé par',caller,'avec',newPeers.length,'newPeers');
@@ -50,6 +50,7 @@ var handleBlockchainResponse = (message, caller) => {
     var latestBlockReceived = receivedBlocks[receivedBlocks.length - 1];
 
     if (A.blockChain.length == 0) {
+	console.log('dans',here,'appel à B.getGenesisBlock');
 	A.blockChain = [B.getGenesisBlock(here)];
     }
     console.log('dans',here,'blockChain',A.blockChain);
@@ -178,7 +179,7 @@ var initHttpServer = (http_port, app, caller) => {
     app.post('/addPeer', (req, res) => {
 	console.log('\n');
 	console.log('dans',here,'/addPeer req.body',req.body);
-        connectToPeers([req.body.peer], here);
+        connectToPeerUrls([req.body.peer], here);
         res.send();
     });
     
@@ -247,6 +248,17 @@ var initP2PServer = (p2p_port, caller) => {
     console.log('      Sortie  de ',here);
 };
 
+var printWebSocketOn = (ws, caller) => {
+    
+    ws.on('message', (data) => {
+	console.log('appelé par',caller,'ws.on data',data);
+    });
+    ws.on('connection', (ws) => {
+	console.log('appelé par',caller,'ws.on connection',ws.url);
+    });
+    
+}
+
 var queryChainLengthMsg = (caller) => {
     var here = O.functionNameJS (ModuleName);
     console.log('\n');
@@ -279,19 +291,7 @@ var responseChainMsg = (caller) => {
     return result;
 };
 
-var printWebSocketOn = (ws, caller) => {
-    
-    ws.on('message', (data) => {
-	console.log('appelé par',caller,'ws.on data',data);
-    });
-    ws.on('connection', (ws) => {
-	console.log('appelé par',caller,'ws.on connection',ws.url);
-    });
-    
-}
-
 module.exports.connectToPeerUrl = connectToPeerUrl;
-module.exports.connectToPeers = connectToPeers;
+module.exports.connectToPeerUrls = connectToPeerUrls;
 module.exports.initHttpServer = initHttpServer;
 module.exports.initP2PServer = initP2PServer;
-
